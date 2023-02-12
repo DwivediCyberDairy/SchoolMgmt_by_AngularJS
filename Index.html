@@ -1,0 +1,100 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+	<script src="js/script.js"></script>
+	
+	
+<title></title>
+<link rel="stylesheet" type="text/css" href="Style.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="myctrl">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a href=""><img class="logo" src="Logo.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+<li><a href="#!/">HOME</a></li>
+<li><a href="#!/about">ABOUT US</a></li>
+<li><a href="#!/Departments">DEPARTMENTS</a></li>
+<li><a href="#!/Branch">AVAILABLE BRANCH</a></li>
+<li><a href="#!/Placement">PLACEMENT</a></li>
+<li><a href="#!/Gallery">GALLERY</a></li>
+<li><a href="#!/Contactus">CONTACT US</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container-fluid" ng-view>
+
+</div>
+
+
+<footer style="margin-top: 5px;">
+   <div class="content">
+     <div class="left box">
+       <div class="upper">
+         <div class="topic">About us</div>
+         <p>Dwivedi Cyber Pvt. Ltd. is a channel where you can learn HTML,
+         CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+       </div>
+       <div class="lower">
+         <div class="topic">Contact us</div>
+         <div class="phone">
+           <a href="#"><i class="fas fa-phone-volume"></i>+91 9058304776</a>
+         </div>
+         <div class="email">
+           <a href="#"><i class="fas fa-envelope"></i> zoit@mykss.in</a>
+         </div>
+       </div>
+     </div>
+     <div class="middle box">
+       <div class="topic">Our Services</div>
+       <div><a href="#">Web Design, Development</a></div>
+       <div><a href="#">Web UX Design, Reasearch</a></div>
+       <div><a href="#">Web User Interface Design</a></div>
+       <div><a href="#">Theme Development, Design</a></div>
+       <div><a href="#">Mobile Application Design</a></div>
+       <div><a href="#">Wire raming & Prototyping</a></div>
+     </div>
+     <div class="right box">
+       <div class="topic">Subscribe us</div>
+       <form action="#">
+         <input type="text" placeholder="Enter email address">
+         <input type="submit" name="" value="Send">
+         <div class="media-icons">
+           <a href="#"><i class="fab fa-facebook-f">&#169;</i></a>
+           <a href="#"><i class="fab fa-instagram">&#37;</i></a>
+           <a href="#"><i class="fab fa-twitter">&#36;</i></a>
+           <a href="#"><i class="fab fa-youtube">&#43;</i></a>
+           <a href="#"><i class="fab fa-linkedin-in">&#33;</i></a>
+         </div>
+       </form>
+     </div>
+   </div>
+   <div class="bottom">
+     <p>Copyright &#169; 2022 <a href="#">K.S.S</a> All rights reserved</p>
+   </div>
+ </footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<html>
+<head>
+<style>
+body{
+background-image:url('images/14.jpg');
+}
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+#galleryholder
+{
+width:90%;
+max-width:700px;
+margin:0px auto;
+}
+#gallery
+{
+position:relative;
+height:0;
+padding-bottom:66.66%;
+}
+#gallery img
+{
+position:absolute;
+left:0;
+top:0;
+width:100%;
+}
+#buttons
+{
+text-align:center;
+}
+#buttons button
+{
+font-size:2em;
+padding:4px 8px;
+border-radius:7px;
+margin:4px;
+background:blue;
+color:white;
+transition:.4s;
+margin-top:440px;
+}
+#buttons button:hover
+{
+background:yellow;
+}
+.imgstyle{
+height:100px;
+width:100px;
+border:3px solid grey;
+}
+.imgstyle1{
+height:450px;
+width:530px;
+border:10px ridge yellow;
+}
+</style>
+<script src="js/jquery-3.6.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$("#mydv img").bind({
+    mouseover:function(){
+	  $(this).css({"cursor":"pointer","border-color":"navy"});
+	},
+	mouseout:function(){
+	  $(this).css({"cursor":"default","border-color":"grey"})
+	},
+	click:function(){
+	  var imgurl=$(this).attr("src");
+	  $("#myImage").fadeOut(300, function(){
+	     $(this).attr("src",imgurl);
+	  }).fadeIn(300);
+	}
+  });  
+//$("#gallery img:gt(0)").hide();
+$("#myBtn1").click(function(){
+$("#gallery img:first").fadeOut().next().fadeIn().end().appendTo("#gallery");
+});
+$("#myBtn2").click(function(){
+$("#gallery img:last").prependTo("#gallery").fadeIn().next().fadeOut();
+});
+});
+</script>
+</head>
+<body>
+<div style="border:10px ridge red;height:580px;width:550px;float:left;;margin-left:120px;margin-top:20px">
+<img src="images/tp1.jpg" id="myImage" height="450px" width="530px" style="border:10px ridge yellow;"/>
+<br>
+<div id="mydv">
+<img class="imgstyle" src="images/tp1.jpg" />
+<img class="imgstyle" src="images/tp2.jpg" />
+<img class="imgstyle" src="images/tp3.jpg" />
+<img class="imgstyle" src="images/tp4.jpg" />
+<img class="imgstyle" src="images/tp5.jpg" />
+</div>
+</div>
+<div id="galleryholder" style="border:10px ridge red;height:580px;width:550px;float:left;margin-top:20px;">
+
+<div id="gallery">
+<img src="images/tp1.jpg" alt="Photo" class="imgstyle1">
+<img src="images/tp2.jpg" alt="Photo" class="imgstyle1">
+<img src="images/tp3.jpg" alt="Photo" class="imgstyle1">
+<img src="images/tp4.jpg" alt="Photo" class="imgstyle1">
+<img src="images/tp5.jpg" alt="Photo" class="imgstyle1">
+<br><br><br>
+<div id="buttons">
+<button id="myBtn1">Prev</button>
+<button id="myBtn2">next</button>
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<body ng-app="app" >
+        <div ng-controller = "MainController as vm">
+        <div class = "container">
+        <div class = "row">
+        <div class = "col-md-12" id ="myBtnContainer">
+        <!-- <button class = "btn active" ng-click = 
+           "vm.selectCategory('all')"> Show all </button> -->
+        <button class = "btn active" ng-click = 
+           "vm.selectCategory('lake')"> Lake Pics </button>
+        <button class = "btn active" ng-click = 
+           "vm.selectCategory('family')"> Family Pics </button>
+        <button class = "btn active" ng-click = 
+        "vm.selectCategory('kids')"> Kid Pics </button>
+      </div>
+	  </div>
+      <div class = "row">
+        <div class = "col-md-12">
+         <div class = "thumbnail">
+		   <div style="float:left;" ng-repeat = "image in vm.options.imageList | filter: { category: vm.selectedCategory }">
+          <img ng-src="{{image.images}}" hspace ="15" vspace ="10">
+         </div>
+       </div>
+      </div>
+     </div>
+</body>

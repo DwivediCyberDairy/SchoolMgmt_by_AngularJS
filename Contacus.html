@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+<body ng-app="">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-12" >
+  <form name="myForm">
+<p>Name:
+<input name="myName" ng-model="myName" required>
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>
+</p>
+
+<p>Address:
+<input name="myAddress" ng-model="myAddress" required>
+<span ng-show="myForm.myAddress.$touched && myForm.myAddress.$invalid">
+The name is required.</span>
+</p>
+<p>Pin Code:
+<input name="myAddress" ng-model="myAddress" required>
+<span ng-show="myForm.myAddress.$touched && myForm.myAddress.$invalid">
+The name is required.</span>
+</p>
+<input type="button" value="Submit">
+<input type="button" value="Reset">
+</form>
+  </div>
+</div>
+</div>
+
+
+</body>
+</html>

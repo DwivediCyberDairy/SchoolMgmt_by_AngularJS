@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body ng-app="app" ng-controller="myctrl">
+
+<div class="container">
+  <h2>Our Placement Status!</h2>
+<input type="text" ng-model="search" placeholder="Enter maching data" class="form-control"/><br><br>  
+  <table class="table table-condensed">
+    <thead>
+      <tr>
+        <th>Sr.No</th>
+        <th>Branch</th>
+        <th>2017</th>
+		<th>2018</th>
+		<th>2019</th>
+		<th>2020</th>
+		<th>2021</th>
+		<th>2022</th>
+		<th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="p in products | orderBy:'pname' | filter:search " > 
+            <td>{{p.sn1}}</td>
+            <td>{{p.branch1}}</td>
+            <td>{{p.y17}}</td>
+            <td>{{p.y18}}</td>
+			<td>{{p.y19}}</td>
+			<td>{{p.y20}}</td>
+			<td>{{p.y21}}</td>
+			<td>{{p.y22}}</td>
+			<td>{{p.Total}}</td>
+
+        </tr>
+	  
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>
